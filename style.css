@@ -1,0 +1,362 @@
+.body{
+    background-color: #DAE3E7;
+}
+p{
+    font-size: 16px;
+}
+h4{
+    color: #a8a8a8;
+}
+header{
+    background-color:  #f5f5f5;
+    padding: 30px;
+}
+.header-in{
+    width: 1150px;
+    display: flex;
+    padding: 0px 30px;
+}
+
+.header-in img{
+    width: 180px;
+    height: 180px;
+    border-radius: 100px;
+}
+.header-inner
+{
+    display: inline-block;
+    margin: auto 25px;
+}
+
+
+.li{
+    margin-top: 20px;
+    display: inline-block;
+    display: flex;
+}
+.li div{
+    width: 36px;
+    height: 36px;
+    margin:0px 8px;
+    background-color: #b0b7bf;
+    text-align: center;
+    border-radius: 18px;
+    cursor: pointer;
+}
+
+.li i{
+    margin:auto;
+    color: white;
+    font-size: 20px;
+    margin-top: 8px;
+}
+.header-div{
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.header-btn
+{
+    color:white;
+    background-color: #54ba4e;
+    border: #54ba4e;
+    border-radius: 4px;
+    padding: 5px 10px;
+}
+
+
+
+.content{
+    width: 1210px;
+    margin:60px auto 60px auto;
+
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 20px;
+    grid-auto-rows: 150px; /*minmax(150px,150px);
+    grid-template-areas: 
+    'about login'
+    'about skils'
+    'main skils'
+    'main testimonials'
+    'main education'
+    'main languages'
+    'other music'
+    'work music'*/
+}
+.content>div{
+    background-color: white;
+    padding: 30px;
+}
+
+.about{
+    grid-row: 1/3;
+}
+.main{
+    grid-row: 3/13;
+}
+.other{
+    grid-row:13/16;
+}
+.work{
+    grid-row:16/19;
+}
+
+
+.login{
+    font-size: 16px;
+}
+.login i{
+    margin-right: 13px;
+}
+.skils{
+    grid-column: 2/3;
+    grid-row: 2/6;
+}
+.testimonials{
+    grid-column: 2/3;
+    grid-row: 6/8;
+}
+.education{
+    grid-column: 2/3;
+    grid-row: 8/10;
+}
+.languages{
+    grid-column: 2/3;
+    grid-row: 10/12;
+}
+.blog{
+    grid-column: 2/3;
+    grid-row: 12/16;
+}
+
+
+
+.main-photo{
+    background-color: #DAE3E7;
+}
+.main-photo img{
+    max-width: 100%;
+}
+.main-photo:hover{
+    opacity: 0.8;
+}
+.main-btn{
+    background-color: blue;
+    color:white;
+    border:none;
+    border-radius: 5px;
+    padding: 6px 12px;
+
+    display: block;
+    margin:20px auto 0px auto;
+}
+.main-grid{
+    display: grid;
+    margin-top:50px;
+    grid-template-columns: 1fr 2fr;
+    grid-auto-rows: auto;
+    grid-gap: 15px;
+}
+.main-grid-img{
+    background-color: white;
+}
+.main-grid-inner
+{
+    display: inline-block;
+    background-color: #DAE3E7;
+}
+.main-grid-inner img{
+    max-width: 100%;
+}
+.main-grid-inner:hover{
+    opacity: 0.8;
+}
+
+
+@media(max-width:1150px)
+{
+    .content{
+        width: 970px;
+    } 
+    p{
+        font-size: 14px;
+    }
+    .header-in{
+        width: 970px;
+    }
+}
+@media(max-width:1000px)
+{
+    .content{
+        margin:50px 20px;
+        width: auto;
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+        grid-auto-rows: auto;
+    } 
+    .header-in{
+        width: 750px;
+    }
+    p{
+        font-size: 14px;
+    }
+    .about, .login, .main, .skils, .testimonials, .education, .languages, .blog, .other, .work{
+        grid-column: 1/2;
+        grid-row: auto;
+    }
+}
+@media(max-width:800px)
+{
+    .main-grid{
+        grid-template-columns: 1fr;
+    }
+    .header-in{
+        display: block;
+        text-align: center;
+        width: auto;
+    }
+    .HI, .header-inner, .header-div{
+         margin-top:20px;
+    }
+   
+}
+
+/*
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+@media(max-width:400px)
+{
+    .grid{
+        grid-template-columns:1fr 1fr;
+    }
+}
+@media(max-width:200px)
+{
+    .grid{
+        grid-template-columns:1fr;
+    }
+}
+
+
+.griid{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-auto-rows: 100px;
+    grid-gap: 5px;
+    /*grid-template-areas: 
+    'header header'
+    'b m'
+    'e e'
+
+}
+.griid div{
+    background-color: aqua;
+}
+
+header
+{
+    background-color: aqua;
+    grid-column: 1/3;
+}
+.bar
+{
+    grid-column: 1/2;
+}
+.main
+{
+    grid-column: 2/3;
+}
+.footer
+{
+    grid-column: 1/3;
+}
+
+
+@media(max-width:640px)
+{
+    .griid{
+        grid-template-columns: 50px 1fr;
+        /*grid-template-areas:
+        'header header'
+        'b m'
+        'e e'
+    }
+}
+@media(max-width:400px)
+{
+    .bar{
+        display: none;
+    }
+    .main{
+        grid-column: 1/3;
+    }
+}
+
+
+.information
+{
+    padding: 0px 5%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: minmax(auto,200px);
+    grid-gap: 5px;
+}
+.div{
+    padding-left: 40px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+
+.div img{
+    position: relative;
+    left: -35px;
+    top: 30px;
+}
+.photos{
+    padding: 0px 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows:auto;
+    grid-gap: 15px;
+}
+.photo{
+    background: linear-gradient(to bottom,#fd6a00,#d19a67);
+    transition: opacity .3s linear;
+}
+.photo img{
+    max-width: 100%;
+}
+.photo:hover {
+    transform: translate3d(-10px,-10px,0px);
+    transition: transform .3s linear;
+    opacity: 0.8;
+}
+.photo:hover img{
+    opacity: 0.2;
+}
+
+
+@media(max-width:800px)
+{
+    .information{
+        grid-template-columns: 1fr 1fr;
+    }
+    .photos{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media(max-width:400px)
+{
+    .information{
+        grid-template-columns: 1fr;
+    }
+    .photos{
+        grid-template-columns: 1fr;
+    }
+}
+*/
